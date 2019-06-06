@@ -1,4 +1,4 @@
-""" A script for reading .dat files for Dummymeuporg. """
+""" A script for reading .dat files in Dummymeuporg. """
 
 import struct
 
