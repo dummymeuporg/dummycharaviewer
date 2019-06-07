@@ -1,9 +1,11 @@
+#!/usr/bin/env python
 """ A script for reading .dat files in Dummymeuporg. """
 
+import sys
 import struct
 
 
-path = "truc.dat"
+source = sys.argv[-1]
 expected_magic_word = 0xdeadface
 
 
@@ -41,7 +43,7 @@ def read_coordinates():
     print(f"Coordinates: {map_name} ({x},{y})")
 
 
-with open(path, "rb") as dat_file:
+with open(source, "rb") as dat_file:
     check_magic_word()
     read_character_name()
     read_filename()
