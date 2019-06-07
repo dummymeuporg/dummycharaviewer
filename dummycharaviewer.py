@@ -19,7 +19,7 @@ def read_character_name():
     name = (struct.unpack(f"<{name_length}s",
             dat_file.read(name_length))[0]).decode('UTF-8')
 
-    print("Character’s Name: ", name)
+    print(f"Character’s Name: {name}")
 
 
 def read_filename():
@@ -27,7 +27,7 @@ def read_filename():
     filename = (struct.unpack(f"<{filename_length}s",
                 dat_file.read(filename_length))[0]).decode('UTF-8')
 
-    print("Filename: ", filename)
+    print(f"Filename: {filename}")
 
 
 def read_coordinates():
