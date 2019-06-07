@@ -32,7 +32,7 @@ def read_filename(dat_file):
 
 def read_coordinates(dat_file):
     coordinates = struct.unpack("<2H", dat_file.read(4))
-    x, y = coordinates[0], coordinates[1]
+    x, y = coordinates
 
     map_name_length = struct.unpack("<L", dat_file.read(4))[0]
     map_name = (struct.unpack(f"<{map_name_length}s",
